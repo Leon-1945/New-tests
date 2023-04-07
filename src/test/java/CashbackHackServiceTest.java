@@ -1,6 +1,8 @@
-import org.testng.annotations.Test;
+import org.junit.Test;
+import junit.framework.TestCase;
+import org.junit.Assert;
 
-import static org.testng.Assert.*;
+
 
 public class CashbackHackServiceTest {
 
@@ -10,7 +12,7 @@ public class CashbackHackServiceTest {
         int expected = 100;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        (expected,actual);
     }
     @Test
     public void testRemain2() {
@@ -18,7 +20,7 @@ public class CashbackHackServiceTest {
         int expected = 10;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        assert(expected,actual);
     }
     @Test
     public void testRemain3() {
@@ -26,6 +28,6 @@ public class CashbackHackServiceTest {
         int expected = 1000;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        assert expected,actual);
     }
 }
