@@ -1,18 +1,18 @@
-import org.junit.Test;
 import junit.framework.TestCase;
 import org.junit.Assert;
+import org.junit.Test;
 
-
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
 
     @Test
-    public void testRemain() {
+    public void remain() {
         int amount = 900;
         int expected = 100;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        (expected,actual);
+        Assert (expected,actual);
     }
     @Test
     public void testRemain2() {
@@ -20,7 +20,7 @@ public class CashbackHackServiceTest {
         int expected = 10;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assert(expected,actual);
+        Assert (expected,actual);
     }
     @Test
     public void testRemain3() {
@@ -28,6 +28,6 @@ public class CashbackHackServiceTest {
         int expected = 1000;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assert expected,actual);
+        Assert (expected,actual);
     }
 }
