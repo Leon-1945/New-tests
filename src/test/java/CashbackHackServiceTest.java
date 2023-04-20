@@ -10,22 +10,33 @@ public class CashbackHackServiceTest {
         int expected = 100;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
+
     @Test
     public void testRemain2() {
         int amount = 990;
         int expected = 10;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
+
     @Test
     public void testRemain3() {
         int amount = 1000;
-        int expected = 1000;
+        int expected = 0;
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(amount);
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void testRemain4() {
+        int amount = 500;
+        int expected = 500;
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(amount);
+        assertEquals(actual, expected);
     }
 }
